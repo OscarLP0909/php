@@ -33,5 +33,6 @@ $person1 = new Persona();
 $person1->nombre = "Ana";
 $person1->apellido = "Algo";
 $person1->edad = 24;
-var_dump($person1);
+// var_dump($person1);
+
 
