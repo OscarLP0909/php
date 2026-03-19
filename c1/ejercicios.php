@@ -91,5 +91,5 @@ function factorial(int $n): int {
     return $n * factorial($n - 1);
 }
 
-$n = 4;
-echo factorial($n);
+
+echo factorial(5);
