@@ -43,7 +43,7 @@ $_numero = 10;
 
 if ($_numero == 0) {
     echo "El número es 0";
-} else if ($_numero > 0) {
+} elseif ($_numero > 0) {
     echo "El número es positivo";
 } else {
     echo "El número es negativo";
