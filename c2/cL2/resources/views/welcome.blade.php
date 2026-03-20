@@ -1,5 +1,4 @@
 @extends('layouts/layout')
-
 @section('title', 'Ejercicio 2')
 @section('content')
     <section class="max-w-2xl mx-auto mt-8">
@@ -12,10 +11,5 @@
             </div>
         </div>
     </section>
-    <footer class="footer footer-center p-5 mt-8 bg-base-300 text-base-content text-xs rounded-box">
-        <div>
-            <p>© 2026 Oscar - Built with Laravel and ❤️</p>
-        </div>
-    </footer>
-    @endsection
-<div>
+    @include('components/footer')
+@endsection
