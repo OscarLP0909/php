@@ -6,8 +6,8 @@
             <div class="card-body">
                 <h1 class="text-3xl font-bold">About Me</h1>
                 <p class="mt-4 text-base-content/60">
-                    Me llamo Óscar Luque Porca, tengo 24 años y estoy empezando a aprender Laravel.<br>
-                    El último libro que me he leído es "Veinte mil leguas del viaje submarino de Julio Verne"
+                    Me llamo {{ $fullName }}.<br>
+                    El último libro que he leído es "{{ $lastBook }}".
                 </p>
             </div>
         </div>

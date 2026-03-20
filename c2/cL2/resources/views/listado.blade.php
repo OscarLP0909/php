@@ -7,11 +7,9 @@
                 <div class="card-body">
                     <h1 class="text-3xl font-bold">Listado de 5 elementos</h1>
                     <ul class="">
-                        <li>Elemento 1</li>
-                        <li>Elemento 2</li>
-                        <li>Elemento 3</li>
-                        <li>Elemento 4</li>
-                        <li>Elemento 5</li>
+                        @foreach ($items as $item)
+                            <li>{{ $item }}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

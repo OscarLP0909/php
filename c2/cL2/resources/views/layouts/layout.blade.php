@@ -16,8 +16,8 @@
                 <li><a href="/" class="hover:text-blue-600">Inicio</a></li>
                 <li><a href="/about" class="hover:text-blue-600">Sobre mí</a></li>
                 <li><a href="/list" class="hover:text-blue-600">Listado</a></li>
-                <li><a href="#" class="hover:text-blue-600">Listado de Deportes</a></li>
-                <li><a href="#" class="hover:text-blue-600">Algo</a></li>
+                <li><a href="/list/sports" class="hover:text-blue-600">Listado de Deportes</a></li>
+                <li><a href="/list/users/1" class="hover:text-blue-600">Listado de Usuarios</a></li>
             </ul>
         </div>
     </nav>

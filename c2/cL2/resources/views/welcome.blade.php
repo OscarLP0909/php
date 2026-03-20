@@ -8,6 +8,13 @@
                 <p class="mt-4 text-base-content/60">
                     Realizando ejercicios de la Tarea 2
                 </p>
+                <ul class="mt-4 list-disc pl-5">
+                    @foreach ($links as $link)
+                        <li>
+                            <a class="text-blue-600 hover:underline" href="{{ $link['url'] }}">{{ $link['label'] }}</a>
+                        </li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </section>
