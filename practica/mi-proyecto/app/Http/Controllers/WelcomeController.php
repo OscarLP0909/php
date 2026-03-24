@@ -8,7 +8,7 @@ class WelcomeController extends Controller
 {
     public function index() {
         $links = [
-            ['label' => 'Sobre mí','url'=> '/about'],
+            ['label' => 'Welcome','url'=> '/'],
             ['label' => 'Sports','url'=> '/sports'],
             ['label' => 'Sobre mí','url'=> '/about'],
         ];
