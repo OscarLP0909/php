@@ -6,7 +6,7 @@ use App\Http\Controllers\ArchivoController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+    });
 
 Route::get('/contacto', [ContactoController::class, 'show'])->name('form.show');
 Route::post('/contacto', [ContactoController::class,'procesar'])->name('form.make');

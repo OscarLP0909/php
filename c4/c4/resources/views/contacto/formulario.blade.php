@@ -1,5 +1,6 @@
 @extends('layout.main')
 @section('title', 'Contacto')
+@include('components.navbar')
 @section('content')
     <div class="container-mt-5" style="padding: 16px;">
         <h1 class="text-2xl font-bold mb-4">Formulario de Contacto</h1>

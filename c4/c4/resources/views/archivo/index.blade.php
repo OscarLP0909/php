@@ -1,5 +1,6 @@
 @extends('layout.main')
 @section('title', 'Archivo')
+@include('components.navbar')
 @section('content')
     <div class="container-mt-5" style="padding: 16px;">
         <h2>Gestión de Archivos</h2>
