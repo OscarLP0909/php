@@ -27,9 +27,24 @@
         <ul class="list-disc pl-5">
             @foreach ($archivos as $archivo)
                 <li>
-                    <a href="{{ route('fichero.download', ['archivo' => basename($archivo)]) }}" class="text-blue-500 hover:underline">
+                    <a href="{{ route('fichero.download', ['archivo' => basename($archivo)]) }}"
+                        class="text-blue-500 hover:underline">
                         {{ basename($archivo) }}
                     </a>
+                </li>
+            @endforeach
+        </ul>
+
+        <h3 class="mt-6 mb-4">Eliminar Archivos</h3>
+        <ul class="list-disc pl-5">
+            @foreach ($archivos as $archivo)
+                <li>
+                    <form action="{{ route('fichero.delete', ['archivo' => basename($archivo)]) }}" method="POST"
+                        onsubmit="return confirm('¿Estás seguro de que deseas eliminar este archivo?');" class="inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="text-red-500 hover:underline">Eliminar {{ basename($archivo) }}</button>
+                    </form>
                 </li>
             @endforeach
         </ul>
