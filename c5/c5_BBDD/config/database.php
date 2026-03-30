@@ -120,7 +120,7 @@ return [
             'username' => env('DB_MONGO_USERNAME', ''),
             'password'=> env('DB_MONGO_PASSWORD', ''),
             'options'=> [
-                'database'=> 'admin' // Base de datos de autenticación en caso de que lo hubiera
+                'database'=> env('DB_MONGO_AUTH_DATABASE', 'admin') // authSource
             ],
 
     ],
