@@ -112,16 +112,18 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
-        'mongodb'=> [
-            'driver'=> 'mongodb',
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => env('DB_MONGO_DSN'),
             'host' => env('DB_MONGO_HOST', '127.0.0.1'),
             'port' => env('DB_MONGO_PORT', 27017),
-            'database'=> env('DB_MONGO_DATABASE', 'test'),
+            'database' => env('DB_MONGO_DATABASE', 'test'),
             'username' => env('DB_MONGO_USERNAME', ''),
-            'password'=> env('DB_MONGO_PASSWORD', ''),
-            'options'=> [
-                'database'=> env('DB_MONGO_AUTH_DATABASE', 'admin') // authSource
+            'password' => env('DB_MONGO_PASSWORD', ''),
+            'options' => [
+                'database' => env('DB_MONGO_AUTH_DATABASE', 'admin'), // authSource
             ],
+        ],
 
     ],
 
@@ -181,5 +183,4 @@ return [
 
     ],
 
-]
 ];

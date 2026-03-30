@@ -11,12 +11,19 @@
             </div>
             <div class="mb-4">
                 <label for="description" class="block text-gray-700 text-sm font-bold mb-2">Descripción:</label>
-                <textarea name="description" id="description" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+                <textarea name="description" id="description" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
             <div class="mb-4">
                 <label for="anio_lanzamiento" class="block text-gray-700 text-sm font-bold mb-2">Año de lanzamiento:</label>
                 <input type="number" name="anio_lanzamiento" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
             </div>
-            <div class="flex items-center justify-between">
+                <div class="mb-4">
+                    <label for="tags" class="block text-gray-700 text-sm font-bold mb-2">Tags:</label>
+                    <select name="tags[]" id="tags" multiple class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        @foreach($tags as $tag)
+                            <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                        @endforeach
+                    </select>
+            <div class="flex items-center justify-between mt-4">
                 <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Crear</button>
             </div>

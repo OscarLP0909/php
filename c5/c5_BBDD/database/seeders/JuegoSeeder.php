@@ -15,21 +15,21 @@ class JuegoSeeder extends Seeder
     public function run(): void
     {
         // Crear etiquetas
-        // $tagRpg = Tag::firstOrCreate(['name' => 'RPG']);
-        // $tagAccion = Tag::firstOrCreate(['name'=> 'Acción']);
+        $tagRpg = Tag::firstOrCreate(['name' => 'RPG']);
+        $tagAccion = Tag::firstOrCreate(['name'=> 'Acción']);
         
         Juego::create([
             'name' => 'Starcraft 3',
             'description' => 'Juego clásico de estrategia',
             'anio_lanzamiento'=> 2004,
-            // 'tags'=> [$tagRpg->_id]
+            'tags'=> [$tagRpg->_id]
         ]);
 
         Juego::create([
             'name'=> 'Cyberpunk 2077',
             'description'=> '',
             'anio_lanzamiento' => 2020,
-            // 'tags'=> [$tagRpg->_id, $tagAccion->_id]
+            'tags'=> [$tagRpg->_id, $tagAccion->_id]
             ]);
     }
 }

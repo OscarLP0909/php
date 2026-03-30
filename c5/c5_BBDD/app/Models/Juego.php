@@ -16,5 +16,6 @@ class Juego extends Model
         $tagIds = json_decode(
             $this->attributes['tags'] ?? '[]', true
         );
+        return Tag::whereIn('_id', is_array($tagIds) ? $tagIds : [])->get();
     }
 }
