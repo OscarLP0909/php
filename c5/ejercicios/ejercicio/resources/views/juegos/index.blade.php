@@ -7,7 +7,7 @@
     </div>
     <ul class="list-disc pl-5 mt-4">
         @foreach ($juegos as $juego)
-            <li class="list-item">{{ $juego->name }} - {{ $juego->description }}</li>
+            <li class="list-item" href="{{ route('juegos.editar', $juego) }}">{{ $juego->name }} - {{ $juego->description }} - {{ $juego->release_year }}</li>
         @endforeach
     </ul>
 @endsection

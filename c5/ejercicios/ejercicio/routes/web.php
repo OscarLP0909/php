@@ -10,3 +10,5 @@ Route::get('/', function () {
 Route::get('/juegos', [JuegoController::class, 'index'])->name('juegos.index');
 Route::get('/juegos/crear', [JuegoController::class,'nuevo'])->name('juegos.crear');
 Route::post('/juegos', [JuegoController::class,'create'])->name('juegos.store');
+Route::put('/juego', [JuegoController::class,'editar'])->name('juegos.editar');
+Route::delete('/juego', [JuegoController::class,'delete'])->name('juegos.delete');

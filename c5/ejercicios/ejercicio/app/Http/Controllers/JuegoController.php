@@ -27,4 +27,19 @@ class JuegoController extends Controller
         ]);
         return redirect()->route('juegos.index');
     }
+
+    public function editar (Request $request, Juego $juego) {
+        $juego->update([
+            'name' => $request->name,
+            'description' => $request->description,
+            'release_year' => $request->release_year,
+            'tags' => $request->tags,
+        ]);
+        return redirect()->route('juegos.index');
+    }
+
+    public function delete (Juego $juego) {
+        $juego->delete();
+        return redirect()->route('juegos.index');
+    }
 }
