@@ -7,7 +7,13 @@
     </div>
     <ul class="list-disc pl-5 mt-4">
         @foreach ($juegos as $juego)
-            <li class="list-item" href="{{ route('juegos.editar', $juego) }}">{{ $juego->name }} - {{ $juego->description }} - {{ $juego->release_year }}</li>
+            <li class="list-item">{{ $juego->name }} - {{ $juego->description }} - {{ $juego->release_year }}</li>
+            <a href="{{ route('juegos.edit', $juego) }}" class="inline-block bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 rounded focus:outline-none focus:shadow-outline">Editar</a>
+            <form action="{{ route('juegos.delete', $juego) }}" method="POST" class="inline-block">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded focus:outline-none focus:shadow-outline">Eliminar</button>
+            </form>
         @endforeach
     </ul>
 @endsection

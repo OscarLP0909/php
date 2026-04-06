@@ -28,6 +28,11 @@ class JuegoController extends Controller
         return redirect()->route('juegos.index');
     }
 
+    public function formEditar (Juego $juego) {
+        $tags = Tag::all();
+        return view('juegos.editar', compact('juego', 'tags'));
+    }
+
     public function editar (Request $request, Juego $juego) {
         $juego->update([
             'name' => $request->name,
