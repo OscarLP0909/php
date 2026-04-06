@@ -27,4 +27,8 @@
                 </div>
             <div class="flex items-center justify-between mt-4">
                 <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Crear</button>
+                <a href="{{ route('juegos.index') }}" class="text-gray-700 hover:text-gray-900 font-semibold">Volver a juegos</a>
             </div>
+        </form>
+    </div>
+@endsection
